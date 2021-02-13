@@ -78,10 +78,13 @@ describe the command here
 USAGE
   $ mdp md-to-slack [FILE]
 
+ARGUMENTS
+  FILE  path to markdown file
+
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -a, --after=after  use only output that comes after a given string
+  -h, --help         show CLI help
+  -i, --stdin        use input from stdin
 ```
 
 _See code: [src/commands/md-to-slack.ts](https://github.com/Koleok/mdp/blob/v0.0.0/src/commands/md-to-slack.ts)_
@@ -94,10 +97,13 @@ describe the command here
 USAGE
   $ mdp slack-to-md [FILE]
 
+ARGUMENTS
+  FILE  path to optional text file containing slack simplified-markdown
+
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -a, --after=after  use only output that comes after a given string
+  -h, --help         show CLI help
+  -i, --stdin        use input from stdin
 ```
 
 _See code: [src/commands/slack-to-md.ts](https://github.com/Koleok/mdp/blob/v0.0.0/src/commands/slack-to-md.ts)_

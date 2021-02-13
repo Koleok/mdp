@@ -1,25 +1,46 @@
-import {Command, flags} from '@oclif/command'
+import fs from 'fs-extra'
+import path from 'path'
+import getStdin from 'get-stdin'
+import Turndown from 'turndown'
+import { toHtml as slackToHtml } from 'light-markdown'
+import { Command, flags } from '@oclif/command'
+
+const turndownService = new Turndown()
+const htmlToMarkdown = (html: string) => turndownService.turndown(html)
 
 export default class SlackToMd extends Command {
   static description = 'describe the command here'
 
   static flags = {
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
+    after: flags.string({
+      char: 'a',
+      description: 'use only output that comes after a given string',
+    }),
+    stdin: flags.boolean({
+      char: 'i',
+      description: 'use input from stdin',
+      default: true,
+    }),
+    help: flags.help({ char: 'h' }),
   }
 
-  static args = [{name: 'file'}]
+  static args = [
+    {
+      name: 'file',
+      description:
+        'path to optional text file containing slack simplified-markdown',
+    },
+  ]
 
   async run() {
-    const {args, flags} = this.parse(SlackToMd)
+    const { args, flags } = this.parse(SlackToMd)
 
-    const name = flags.name ?? 'world'
-    this.log(`hello ${name} from /Users/kylechamberlain/oss/testmdp/mdp/src/commands/slack-to-md.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
-    }
+    return (!flags.stdin
+      ? fs.readFile(path.resolve(__dirname, args.file), 'utf8')
+      : getStdin()
+    )
+      .then(slackToHtml)
+      .then(htmlToMarkdown)
+      .then(this.log.bind(this))
   }
 }

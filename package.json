@@ -15,10 +15,12 @@
     "fs-extra": "^9.1.0",
     "get-stdin": "^8.0.0",
     "html-slack": "godolatunji/html-slack",
+    "light-markdown": "^0.1.4",
     "remark-html": "^13.0.1",
     "remark-parse": "^9.0.0",
     "remark-stringify": "^9.0.1",
     "tslib": "^2.1.0",
+    "turndown": "^7.0.0",
     "unified": "^9.2.0"
   },
   "devDependencies": {
