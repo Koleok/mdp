@@ -16,6 +16,7 @@
     "get-stdin": "^8.0.0",
     "html-slack": "godolatunji/html-slack",
     "light-markdown": "^0.1.4",
+    "node-fetch": "^2.6.1",
     "remark-html": "^13.0.1",
     "remark-parse": "^9.0.0",
     "remark-stringify": "^9.0.1",

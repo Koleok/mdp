@@ -61,9 +61,10 @@ ARGUMENTS
   FILE  path to markdown file
 
 OPTIONS
-  -a, --after=after  use only output that comes after a given string
-  -h, --help         show CLI help
-  -i, --stdin        use input from stdin
+  -a, --after=after    use only output that comes after a given string
+  -h, --help           show CLI help
+  -i, --stdin          use input from stdin
+  -s, --sendTo=sendTo  slack api url to send resulting text to
 ```
 
 _See code: [src/commands/md-to-slack.ts](https://github.com/Koleok/mdp/blob/v0.0.0/src/commands/md-to-slack.ts)_

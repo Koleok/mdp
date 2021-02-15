@@ -36,7 +36,7 @@ export default class SlackToMd extends Command {
     const { args, flags } = this.parse(SlackToMd)
 
     return (!flags.stdin
-      ? fs.readFile(path.resolve(__dirname, args.file), 'utf8')
+      ? fs.readFile(path.resolve(process.cwd(), args.file), 'utf8')
       : getStdin()
     )
       .then(slackToHtml)
