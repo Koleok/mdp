@@ -71,7 +71,7 @@ OPTIONS
   -s, --sendTo=sendTo  slack api url to send resulting text to
 ```
 
-_See code: [src/commands/md-to-slack.ts](https://github.com/Koleok/mdp/blob/v0.0.0/src/commands/md-to-slack.ts)_
+_See code: [src/commands/md-to-slack.ts](https://github.com/Koleok/mdp/blob/master/src/commands/md-to-slack.ts)_
 
 ## `mdp slack-to-md [FILE]`
 
@@ -90,5 +90,5 @@ OPTIONS
   -i, --stdin        use input from stdin
 ```
 
-_See code: [src/commands/slack-to-md.ts](https://github.com/Koleok/mdp/blob/v0.0.0/src/commands/slack-to-md.ts)_
+_See code: [src/commands/slack-to-md.ts](https://github.com/Koleok/mdp/blob/master/src/commands/slack-to-md.ts)_
 <!-- commandsstop -->
