@@ -28,30 +28,9 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`mdp hello [FILE]`](#mdp-hello-file)
 * [`mdp help [COMMAND]`](#mdp-help-command)
 * [`mdp md-to-slack [FILE]`](#mdp-md-to-slack-file)
 * [`mdp slack-to-md [FILE]`](#mdp-slack-to-md-file)
-
-## `mdp hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ mdp hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ mdp hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/Koleok/mdp/blob/v0.0.0/src/commands/hello.ts)_
 
 ## `mdp help [COMMAND]`
 
