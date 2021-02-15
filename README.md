@@ -1,5 +1,4 @@
-mdp
-===
+# `M`ark`d`own `p`lease
 
 cli to convert markdown to slack-markdown or the other way around
 
@@ -9,10 +8,13 @@ cli to convert markdown to slack-markdown or the other way around
 [![License](https://img.shields.io/npm/l/mdp.svg)](https://github.com/Koleok/mdp/blob/master/package.json)
 
 <!-- toc -->
+* [`M`ark`d`own `p`lease](#markdown-please)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
 ```sh-session
 $ npm install -g mdp
@@ -26,7 +28,9 @@ USAGE
 ...
 ```
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
 * [`mdp help [COMMAND]`](#mdp-help-command)
 * [`mdp md-to-slack [FILE]`](#mdp-md-to-slack-file)
